@@ -91,7 +91,7 @@ Call examples:
 4. deposit account list: http://127.0.0.1:5000/d_acclist/1
 5. deposit account balance : http://127.0.0.1:5000/d_accbal/74/1/2018
 6. credit account list : http://127.0.0.1:5000/c_acclist/2
-7. credit account balance: 
+7. credit account balance: http://127.0.0.1:5000/c_accbal/106
 8. marketing Messages : http://127.0.0.1:5000/marketing_messages
 9. personal messages : http://127.0.0.1:5000/msg/1
 
