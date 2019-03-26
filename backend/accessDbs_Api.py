@@ -58,4 +58,4 @@ def personalMessages(customerId):
 # accID(deposit): 74 or 10
 # accID(credit): (106,206) or [null]
 
-# pprint(personalMessages(1))
+# pprint(transactionDetails(10, '01-01-2018','02-01-2019'))
