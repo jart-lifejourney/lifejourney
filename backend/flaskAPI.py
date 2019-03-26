@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 '''
 pip install flask-restful   #to install this
 python flaskAPI.py          #to run
