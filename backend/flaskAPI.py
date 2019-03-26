@@ -68,7 +68,7 @@ class personalMessages(Resource):
 
 
 api.add_resource(customerID, "/id/<string:username>")
-api.add_resource(customerDetails, "/c_details/<int:customerId>")###!!!
+api.add_resource(customerDetails, "/c_details/<int:customerId>")
 api.add_resource(transactionDetails, "/transactionDetails/<int:accId>/<string:From>/<string:To>") 
 api.add_resource(depositAccList, "/d_acclist/<int:customerId>")
 api.add_resource(depositAccBalance, "/d_accbal/<int:accID>/<string:month>/<string:year>")
@@ -83,11 +83,8 @@ app.run(debug=True)
 '''
 Call examples:
 1. Customer ID: http://127.0.0.1:5000/id/marytan
-
-2. customerDetails: 
-
+2. customerDetails: http://127.0.0.1:5000/c_details/1
 3. transaction details :http://127.0.0.1:5000/transactionDetails/10/01-01-2018/02-01-2019
-
 4. deposit account list: http://127.0.0.1:5000/d_acclist/1
 5. deposit account balance : http://127.0.0.1:5000/d_accbal/74/1/2018
 6. credit account list : http://127.0.0.1:5000/c_acclist/2
