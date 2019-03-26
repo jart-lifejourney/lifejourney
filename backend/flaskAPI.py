@@ -6,6 +6,7 @@ python flaskAPI.py          #to run
 from flask import Flask
 from flask_restful import Api, Resource, reqparse # 
 import accessDbs_Api
+import customFunctions
 
 app=Flask(__name__)
 api=Api(app)
@@ -80,7 +81,8 @@ api.add_resource(marketingMessages, "/marketing_messages")
 
 
 api.add_resource(personalMessages, "/msg/<int:customerId>")
-app.run(debug=True)
+
+
 '''
 Call examples:
 1. Customer ID: http://127.0.0.1:5000/id/marytan
@@ -94,3 +96,15 @@ Call examples:
 9. personal messages : http://127.0.0.1:5000/msg/1
 
 '''
+#######################################################3
+# customfunctions
+#######################################################3
+class totalSpendCategory(Resource):
+    def get(self, customerId):
+        return customFunctions.totalSpendCategory(customerId)
+    def post(self):
+        pass
+
+api.add_resource(totalSpendCategory, "/t_category/<int:customerId>")
+
+app.run(debug=True)
