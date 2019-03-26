@@ -12,13 +12,13 @@ api=Api(app)
 
 class customerID(Resource):
     def get(self, username):
-        return accessDbs_Api.customerID(username), 200
+        return accessDbs_Api.customerID(username), 200, {'Access-Control-Allow-Origin': '*'}
     def post(self,username):
         pass
 
 class customerDetails(Resource):
     def get(self, customerId):
-        return accessDbs_Api.customerDetails(customerID),200
+        return accessDbs_Api.customerDetails(customerID),200, {'Access-Control-Allow-Origin': '*'}
     def post(self, username):
         pass
 
@@ -30,38 +30,38 @@ class transactionDetails(Resource):
 
 class depositAccList(Resource):
     def get(self, customerId):
-        return accessDbs_Api.depositAccList(customerId),200
+        return accessDbs_Api.depositAccList(customerId),200, {'Access-Control-Allow-Origin': '*'}
     def post(self, username):
         pass
 
 class depositAccBalance(Resource):
     def get(self,accID, month, year):
-        return accessDbs_Api.depositAccBalance(accID, month, year) ,200
+        return accessDbs_Api.depositAccBalance(accID, month, year) ,200, {'Access-Control-Allow-Origin': '*'}
     def post(self, username):
         pass
 
 class creditAccList(Resource):
     def get(self,customerId):
-        return accessDbs_Api.creditAccList(customerId) ,200
+        return accessDbs_Api.creditAccList(customerId) ,200, {'Access-Control-Allow-Origin': '*'}
     def post(self, username):
         pass
 
 class creditAccBalance(Resource):
     def get(self,accID):
-        return accessDbs_Api.creditAccBalance(accID) ,200
+        return accessDbs_Api.creditAccBalance(accID) ,200, {'Access-Control-Allow-Origin': '*'}
     def post(self, username):
         pass
 
 class marketingMessages(Resource):
     def get(self):
-        return accessDbs_Api.marketingMessages() ,200
+        return accessDbs_Api.marketingMessages() ,200, {'Access-Control-Allow-Origin': '*'}
     def post(self, username):
         pass
 
 class personalMessages(Resource):
     def get(self, customerId):
         print(customerId, type((customerId)))
-        return accessDbs_Api.personalMessages(customerId), 200
+        return accessDbs_Api.personalMessages(customerId), 200, {'Access-Control-Allow-Origin': '*'}
     def post(self, username):
         pass
 
